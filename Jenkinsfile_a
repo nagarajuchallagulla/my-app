@@ -5,6 +5,7 @@ node {
   }
   stage('Building the code with maven')
   {
-  sh 'mvn package'
+  def mvnhome= tool name: 'Maven 3.5.2', type: 'maven'
+  sh "${mvnhome}/bin/mvn package"
   }
 }
