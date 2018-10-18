@@ -1,0 +1,10 @@
+node {
+  stage('SCM Checkout')
+  {
+  git 'https://github.com/nagarajuchallagulla/my-app'
+  }
+  stage(Building the code with maven')
+  {
+  sh 'mvn package'
+  }
+}
